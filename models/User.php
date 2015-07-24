@@ -61,14 +61,14 @@ class User extends \yii\redis\ActiveRecord implements \yii\web\IdentityInterface
     }
 
     /**
-     * Finds user by username
+     * Finds user by account
      *
-     * @param  string      $username
+     * @param  string      $account
      * @return static|null
      */
-    public static function findByUsername($username)
+    public static function findByAccount($account)
     {
-        return static::findOne(['account' => $username]);
+        return static::findOne(['account' => $account]);
     }
 
     /**
